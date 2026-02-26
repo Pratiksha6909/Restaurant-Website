@@ -1,44 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contact</title>
+<form id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
 
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+<p id="thankYouMessage" style="display:none; color:green; font-weight:bold; margin-top:10px;">
+  Thank you! Your message has been sent.
+</p>
 
-    <body>
+<script>
+const form = document.getElementById('contactForm');
+const msg = document.getElementById('thankYouMessage');
 
-<header>
-    <h1>Spice Garden</h1>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
-
-<section class="contact-form">
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-        <button type="submit">Send Message</button>
-    </form>
-
-    <p id="thankYou" style="display:none; color: green; font-weight: bold;">
-        Thank you! Your message has been sent.
-    </p>
-</section>
-
-<script src="../js/script.min.js"></script>
-</body>
-</body>
-</html>
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent page reload
+  msg.style.display = 'block'; // Show thank you message
+  form.reset(); // Clear the form
+});
+</script>
