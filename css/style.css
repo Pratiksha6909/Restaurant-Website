@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: black;
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: orange;
+    color: white;
+}
+
+.hero button {
+    padding: 10px 20px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* About */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Services */
+.services {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    border-radius: 8px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+}
+.contact-form {
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.contact-form button {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.gallery h2 {
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid .card img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid .card img:hover {
+    transform: scale(1.05);
+}
